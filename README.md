@@ -1,3 +1,0 @@
-# evacuator-service
-evacuator-service
-////
