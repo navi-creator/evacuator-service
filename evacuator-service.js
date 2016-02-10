@@ -10,7 +10,7 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'click button': function () {
-      // incremггггent the counter when button is clicked
+      // incremггent the counter when button is clicked
       Session.set('counter', Session.get('counter') + 1);
     }
   });
