@@ -1,2 +1,15 @@
+/inspection
+/_mac
+/evacuator-services.js
+/evacuator-services.css
+/ignore.xml
+/web-browsers.xml
+/evacuator-services.html
+/ide.general.xml
+/debugger.xml
+/diff.xml
+/IntelliLang.xml
+/file.template.settings.xml
+/ui.lnf.xml
 .meteor/local
 .meteor/meteorite
