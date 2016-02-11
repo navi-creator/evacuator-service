@@ -1,84 +1,48 @@
 <ion-view>
-    <ion-side-menus>
-        <ion-side-menu-content>
-            <div class="bar bar-header bar-positive">
-                <button menu-toggle="left" class="button button-icon icon ion-navicon-round button-clear button-white"></button>
-                <h1 class="title">Вызвать Эвакуатор</h1>
-                <button class="button button-icon icon ion-ios-information-outline button-clear button-white"></button>
+    <div class="bar bar-header bar-positive">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon-round button-clear button-white"></button>
+        <h1 class="title">Вызвать Эвакуатор</h1>
+        <button class="button button-icon icon ion-ios-information-outline button-clear button-white"></button>
+    </div>
+    <ion-content scroll="false" class="map-wrapper has-header">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442306!2d37.61531071622802!3d55.752023280553104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1455188791748" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="use-info">
+                <div class="alert green">
+                    <i class="ion-checkmark-round"></i>
+                </div>
+                <div class="text">
+                    <b>Ваш запрос успешно отправлен</b>
+                    <p>Машина выехал, оператор свяжется с вами по телефону</p>
+                </div>
             </div>
-            <ion-content scroll="false" class="map-wrapper has-header">
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442306!2d37.61531071622802!3d55.752023280553104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1455188791748" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <div class="use-info">
-                        <div class="alert green">
-                            <i class="ion-checkmark-round"></i>
-                        </div>
-                        <div class="text">
-                            <b>Ваш запрос успешно отправлен</b>
-                            <p>Машина выехал, оператор свяжется с вами по телефону</p>
-                        </div>
-                    </div>
-                    <div class="to-call-driver">
-                        <div>
-                            <button class="round-button green">
-                                <i class="ion-ios-telephone"></i>
-                            </button>
-                            <span>Набрать водителя</span>
-                        </div>
-                        <div>
-                            <button class="round-button red">
-                                <i class="ion-close-round"></i>
-                            </button>
-                            <span>Отменить вызов</span>
-                        </div>
-                    </div>
-                    <div class="evacuation-descr">
-                        <div class="time">Прибытие через: 40 мин.</div>
-                        <div class="ava">
-                            <i class="ion-person"></i>
-                        </div>
-                        <div class="info">
-                            <div class="name">Говоров Антон Олегович</div>
-                            <div class="car-info">
-                                Эвакуатор: <i>Газель 7895</i> <br>
-                                Гос Номер: <i>Г656ПА777</i>
-                            </div>
-                        </div>
+            <div class="to-call-driver">
+                <div>
+                    <button class="round-button green">
+                        <i class="ion-ios-telephone"></i>
+                    </button>
+                    <span>Набрать водителя</span>
+                </div>
+                <div>
+                    <button class="round-button red">
+                        <i class="ion-close-round"></i>
+                    </button>
+                    <span>Отменить вызов</span>
+                </div>
+            </div>
+            <div class="evacuation-descr">
+                <div class="time">Прибытие через: 40 мин.</div>
+                <div class="ava">
+                    <i class="ion-person"></i>
+                </div>
+                <div class="info">
+                    <div class="name">Говоров Антон Олегович</div>
+                    <div class="car-info">
+                        Эвакуатор: <i>Газель 7895</i> <br>
+                        Гос Номер: <i>Г656ПА777</i>
                     </div>
                 </div>
-            </ion-content>
-        </ion-side-menu-content> 
-
-        <ion-side-menu side="left">
-            <ion-content class="ev-side-menue">
-                <div class="user">
-                    <div class="ava">
-                        <i class="ion-person"></i>
-                    </div>
-                    <div class="info">
-                        <div class="name">BEEL PAU</div>
-                        <div class="car">Mercedes-Benz GLK 500</div>
-                    </div>
-                </div>
-                <nav class="links">
-                    <a href="">
-                        <i class="ion-model-s"></i>
-                        Мой профиль
-                    </a>
-                    <a href="">
-                        <i class="ion-settings"></i>
-                        Автосервис
-                    </a>
-                    <a href="">
-                        <i class="ion-ios-book"></i>
-                        Контакты
-                    </a>
-                    <a href="">
-                        <i class="ion-log-out"></i>
-                        Выход
-                    </a>
-                </nav>
-            </ion-content>
-        </ion-side-menu>
-    </ion-side-menus>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>

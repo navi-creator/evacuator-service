@@ -16,21 +16,47 @@ function config($stateProvider, $urlRouterProvider) {
             url: '/signup',
             templateUrl: 'client/templates/signup.html'
         })
-        .state('map01', {
+        .state('app.map01', {
             url: '/map01',
-            templateUrl: 'client/templates/map01.html'
+            views:{
+                'menuContent': {
+                    templateUrl: 'client/templates/map01.html',
+                    //controller: ''
+                }
+            }
         })
-        .state('map02', {
+        .state('app.map02', {
             url: '/map02',
-            templateUrl: 'client/templates/map02.html'
+            views:{
+                'menuContent': {
+                    templateUrl: 'client/templates/map02.html'
+                    //controller: ''
+                }
+            }
         })
-        .state('map03', {
+        .state('app.map03', {
             url: '/map03',
-            templateUrl: 'client/templates/map03.html'
+            views:{
+                'menuContent': {
+                    templateUrl: 'client/templates/map03.html'
+                    //controller: ''
+                }
+            }
         })
-        .state('profile', {
+        .state('app.profile', {
             url: '/profile',
-            templateUrl: 'client/templates/profile.html'
+            views:{
+                'menuContent': {
+                    templateUrl: 'client/templates/profile.html'
+                    //controller: ''
+                }
+            }
         })
+        .state('app', {
+            url: '/app',
+            abstract: true,
+            templateUrl: 'client/templates/menus.html'
+            //controller: 'LeftMenuCtrl'
+        });
     $urlRouterProvider.otherwise('start');
 }
