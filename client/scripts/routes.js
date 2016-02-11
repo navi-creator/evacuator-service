@@ -1,5 +1,5 @@
 angular
-    .module('Whatsapp')
+    .module('Evacuator')
     .config(config);
 
 function config($stateProvider, $urlRouterProvider) {
@@ -32,18 +32,5 @@ function config($stateProvider, $urlRouterProvider) {
             url: '/profile',
             templateUrl: 'client/templates/profile.html'
         })
-        .state('tab', {
-            url: '/tab',
-            abstract: true,
-            templateUrl: 'client/templates/tabs.html'
-        })
-        .state('tab.chats', {
-            url: '/chats',
-            views: {
-                'tab-chats': {
-                    templateUrl: 'client/templates/chats.html'
-                }
-            }
-        })
-    $urlRouterProvider.otherwise('tab/chats');
+    $urlRouterProvider.otherwise('start');
 }

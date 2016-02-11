@@ -4,14 +4,11 @@
 
 /******vars*********/
 /******v-align******/
-.valign {
+.valign, .valign .scroll {
   min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.valign .scroll {
-  width: 100%;
 }
 
 /******splash*******/
@@ -475,7 +472,6 @@
 /********elements*******/
 .bar.bar-transparent {
   background: transparent;
-  border: none;
 }
 
 .button.button-white {
@@ -488,11 +484,6 @@
 
 .bar .title {
   font-weight: 400;
-}
-
-.svg-nav {
-  width: 35px;
-  margin-top: 6px;
 }
 
 .ev-input {

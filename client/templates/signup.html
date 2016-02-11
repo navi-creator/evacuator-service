@@ -1,12 +1,12 @@
 <ion-view class="spalsh-bg">
     <div class="bar bar-header bar-transparent">
-        <button class="button icon-left ion-ios-arrow-back button-clear button-white">Назад</button>
+        <button ng-click="goBack()" class="button icon-left ion-ios-arrow-back button-clear button-white">Назад</button>
     </div>
-    <ion-content class="has-header">
+    <ion-content class="valign has-header">
     	<div class="splash-container padding">
     		<div class="logo">
-                <img width="104px" src="svg/car.svg" alt="">
-            </div>
+    			<img src="img/car.png" alt="">
+    		</div>
             <div class="form signup">
                 <div class="ev-input">
                     <input type="text" placeholder="Ваше имя">
@@ -51,7 +51,7 @@
                 </button>
                 
                 <div class="recover">
-                    Уже есть аккаунт? <a href="">Войти</a>
+                    Уже есть аккаунт? <a ui-sref="signin">Войти</a>
                 </div>
             </div>
     	</div>
