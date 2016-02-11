@@ -1,0 +1,101 @@
+<ion-view>
+    <ion-side-menus>
+        <ion-side-menu-content>
+            <div class="bar bar-header bar-positive">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon-round button-clear button-white"></button>
+                <h1 class="title">Профиль</h1>
+                <button class="button button-icon icon ion-ios-information-outline button-clear button-white"></button>
+            </div>
+            <ion-content class="valign has-header">
+                <div class="profile-container">
+                    <div class="ava">
+                        <i class="ion-person"></i>
+                    </div>
+                    <div class="form">
+                        <div class="ev-input blue">
+                            <input type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="ev-select blue">
+                                    <i class="ion-ios-arrow-down"></i>
+                                    <select name="" id="">
+                                        <option default value="">Марка авто</option>
+                                        <option value="">Mazda</option>
+                                        <option value="">Nissand</option>
+                                        <option value="">Mercedes-Benz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="ev-select blue">
+                                    <i class="ion-ios-arrow-down"></i>
+                                    <select name="" id="">
+                                        <option value="">Модель</option>
+                                        <option value="">Tiida</option>
+                                        <option value="">Almera</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ev-input blue">
+                            <input type="text" placeholder="ГОС НОМЕР  X000XX000">
+                        </div>
+                        <div class="ev-input blue">
+                            <input type="tel" placeholder="Номер телефона">
+                        </div>
+                        <div class="row">
+                            <div class="col-67">
+                                <div class="ev-input blue">
+                                    <input type="tel" placeholder="Пароль из SMS">
+                                </div>
+                            </div>
+                            <div class="col-33">
+                                <button class="ev-button button-green">
+                                    изменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="align-center">
+                            <button class="ev-button button-blue">
+                                Сохранить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-side-menu-content> 
+
+        <ion-side-menu side="left">
+            <ion-content class="ev-side-menue">
+                <div class="user">
+                    <div class="ava">
+                        <i class="ion-person"></i>
+                    </div>
+                    <div class="info">
+                        <div class="name">BEEL PAU</div>
+                        <div class="car">Mercedes-Benz GLK 500</div>
+                    </div>
+                </div>
+                <nav class="links">
+                    <a href="">
+                        <i class="ion-model-s"></i>
+                        Мой профиль
+                    </a>
+                    <a href="">
+                        <i class="ion-settings"></i>
+                        Автосервис
+                    </a>
+                    <a href="">
+                        <i class="ion-ios-book"></i>
+                        Контакты
+                    </a>
+                    <a href="">
+                        <i class="ion-log-out"></i>
+                        Выход
+                    </a>
+                </nav>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</ion-view>

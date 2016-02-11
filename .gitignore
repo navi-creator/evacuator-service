@@ -17,3 +17,4 @@
 /ui.lnf.xml
 .meteor/local
 .meteor/meteorite
+/public/.sass-cache

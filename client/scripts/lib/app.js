@@ -10,7 +10,6 @@ if (Meteor.isCordova) {
 else {
   angular.element(document).ready(onReady);
 }
-
 function onReady() {
   angular.bootstrap(document, ['Whatsapp']);
 }

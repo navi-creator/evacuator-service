@@ -1,0 +1,55 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button class="button button-icon icon ion-navicon-round button-clear button-white"></button>
+        <h1 class="title">Вызвать Эвакуатор</h1>
+        <button class="button button-icon icon ion-ios-information-outline button-clear button-white"></button>
+    </div>
+    <ion-content scroll="false" class="map-wrapper has-header">
+    	<div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442306!2d37.61531071622802!3d55.752023280553104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1455188791748" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="call-evacuation">
+                <button class="remove round-button red">
+                    <i class="ion-close-round"></i>
+                </button>
+            </div>
+            <div class="evacuation-info">
+                <div class="adress">
+                    <div class="icon">
+                        <div class="hexa">
+                            <i class="ion-ios-home-outline"></i>
+                        </div>
+                    </div>
+                    <div class="adress-name">
+                        Можайское шоссе 159 строение 1
+                    </div>
+                </div>
+                <div class="car-info">
+                    <div class="field">
+                        <div class="dott"></div>
+                        <div class="info">
+                            <label>Авто</label>
+                            <input type="text" placeholder="Марка, модель">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="dott"></div>
+                        <div class="info">
+                            <label>Гос номер</label>
+                            <input type="text" placeholder="x000xx000">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="dott"></div>
+                        <div class="info">
+                            <label>Комментарий</label>
+                            <input type="text" placeholder="Причина">
+                        </div>
+                    </div>
+                </div>
+                <div class="call">
+                    <button>Вызвать Эвакуатор</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
