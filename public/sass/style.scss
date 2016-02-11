@@ -8,11 +8,12 @@ $green: #66A817;
 $blue: #2098F5;
 /******v-align******/
 .valign {
-	&, .scroll {
-		min-height: 100%;
-		display: flex;
-    	align-items: center;
-    	justify-content: center;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.scroll {
+		width: 100%;
 	}
 }
 /******splash*******/
@@ -471,6 +472,7 @@ $blue: #2098F5;
 /********elements*******/
 .bar.bar-transparent {
 	background: transparent;
+	border: none;
 }
 .button.button-white {
 	color: #fff;
@@ -480,6 +482,10 @@ $blue: #2098F5;
 }
 .bar .title {
 	font-weight: 400;
+}
+.svg-nav {
+	width: 35px;
+    margin-top: 6px;
 }
 
 .ev-input {
