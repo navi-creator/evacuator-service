@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
 /******vars*********/
 /******v-align******/
 .valign, .valign .scroll {

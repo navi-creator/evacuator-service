@@ -22,7 +22,7 @@ function config($stateProvider, $urlRouterProvider,uiGmapGoogleMapApiProvider) {
             views:{
                 'menuContent': {
                     templateUrl: 'client/templates/map01.html',
-                    controller: 'MapAvto'
+                    controller: 'MapCtrl'
                 }
             }
         })
