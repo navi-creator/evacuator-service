@@ -20,3 +20,4 @@ driftyco:ionic          #Ionic - Meteor Platform version
 angular                 #Angular - Meteor Platform version
 
 accounts-password
+angularui:angular-google-maps
