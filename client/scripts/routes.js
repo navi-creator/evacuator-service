@@ -2,7 +2,8 @@ angular
     .module('Evacuator')
     .config(config);
 
-function config($stateProvider, $urlRouterProvider) {
+function config($stateProvider, $urlRouterProvider,uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({v: '3.21', libraries: 'geometry,places', language:'ru-RU'});
     $stateProvider
         .state('start', {
             url: '/start',
@@ -10,18 +11,18 @@ function config($stateProvider, $urlRouterProvider) {
         })
         .state('signin', {
             url: '/signin',
-            templateUrl: 'client/templates/signin.html'
+            templateUrl: 'client/templates/sign/signin.html'
         })
         .state('signup', {
             url: '/signup',
-            templateUrl: 'client/templates/signup.html'
+            templateUrl: 'client/templates/sign/signup.html'
         })
         .state('app.map01', {
             url: '/map01',
             views:{
                 'menuContent': {
                     templateUrl: 'client/templates/map01.html',
-                    //controller: ''
+                    controller: 'MapAvto'
                 }
             }
         })

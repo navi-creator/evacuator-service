@@ -1,7 +1,9 @@
 angular
     .module('Evacuator', [
-      'angular-meteor',
-      'ionic'
+        'angular-meteor',
+        'ionic',
+        'uiGmapgoogle-maps',
+        'evaceator.controllers'
     ]).run(function($ionicHistory,$rootScope){
     $rootScope.goBack = function() { $ionicHistory.goBack(); };
 });
@@ -15,3 +17,5 @@ else {
 function onReady() {
   angular.bootstrap(document, ['Evacuator']);
 }
+
+
