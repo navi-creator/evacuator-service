@@ -20,12 +20,32 @@ angular.module('evaceator.controllers', [])
     .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
         function initialize() {
             var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+            var infoWindow = new google.maps.InfoWindow({map: map});
+
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('Location found.');
+                    map.setCenter(pos);
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+
 
             var mapOptions = {
                 center: myLatlng,
                 zoom: 16,
-                zoomControl: false,
-                scaleControl: true,
+                disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             var map = new google.maps.Map(document.getElementById("map"),
@@ -69,10 +89,6 @@ angular.module('evaceator.controllers', [])
             }, function(error) {
                 alert('Unable to get location: ' + error.message);
             });
-        };
-
-        $scope.clickTest = function() {
-            alert('Example of infowindow with ng-click')
         };
 
     });

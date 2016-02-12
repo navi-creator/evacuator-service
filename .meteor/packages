@@ -22,4 +22,3 @@ angular                 #Angular - Meteor Platform version
 accounts-password
 angularui:angular-google-maps
 aldeed:collection2
-dburles:google-maps
