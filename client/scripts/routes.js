@@ -53,6 +53,24 @@ function config($stateProvider, $urlRouterProvider,uiGmapGoogleMapApiProvider) {
                 }
             }
         })
+        .state('app.service', {
+            url: '/service',
+            views:{
+                'menuContent': {
+                    templateUrl: 'client/templates/service.html'
+                    //controller: ''
+                }
+            }
+        })
+        .state('app.contact', {
+            url: '/contact',
+            views:{
+                'menuContent': {
+                    templateUrl: 'client/templates/contact.html'
+                    //controller: ''
+                }
+            }
+        })
         .state('app', {
             url: '/app',
             abstract: true,

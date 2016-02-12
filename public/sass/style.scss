@@ -468,7 +468,67 @@ $blue: #2098F5;
 		} 
 	}
 }
-
+/******service*******/
+.service-adress {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: #fff;
+	font-size: 17px;
+	padding: 30px 20px;
+	p {
+		font-weight: 300;
+		margin: 10px 0 0;
+		line-height: 22px;
+	}
+	.round-button {
+		margin-top: 30px;
+	}
+}
+/*******contacts********/
+.contacts-list {
+	a {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px #e6e6e6 solid;
+		padding: 12px;
+		color: #000;
+		text-decoration: none;
+		&.activated {
+			background: rgba(#ccc,0.3);
+		}
+	}
+	.ava {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 12px;
+		text-align: center;
+		img {
+			width: 100%;
+		}
+		i {
+			display: block;
+			color: #58C5F5;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			font-size: 25px;
+			line-height: 45px;
+			border: 2px #58C5F5 solid;
+		}
+	}
+	.user {
+		font-size: 14px;
+		.name {
+			font-weight: 600;
+		}
+		.work {
+			color: #212121;
+		}
+	}
+}
 /********elements*******/
 .bar.bar-transparent {
 	background: transparent;
