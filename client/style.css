@@ -682,6 +682,7 @@
 
 .round-button {
   text-align: center;
+  padding: 0px;
   font-size: 30px;
   border: none;
   color: #fff;
