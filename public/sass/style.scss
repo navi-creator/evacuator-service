@@ -155,6 +155,16 @@ $blue: #2098F5;
 	height: 100%;
 	width: 100%;
 	position: relative;
+	.map.center {
+		display: block;
+		width: 100%;
+		height: 100%;
+		.angular-google-map,
+		.angular-google-map-container {
+			width: 100%;
+			height: 100%;
+		}
+	}
 	.use-info {
 		position: absolute;
 		top: 0px;
