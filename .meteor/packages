@@ -15,10 +15,14 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
 autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
 driftyco:ionic          #Ionic - Meteor Platform version
 angular                 #Angular - Meteor Platform version
 
 accounts-password
-angularui:angular-google-maps
 aldeed:collection2
+netanelgilad:ng-cordova
+fxckdead:angular-elastic
+konecty:autolinker
+angularui:angular-google-maps
+aaronroberson:ng-mask
+255kb:cordova-keyboard

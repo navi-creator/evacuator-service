@@ -17,78 +17,66 @@ angular.module('evaceator.controllers', [])
         };
     })*/
 
-    .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
-            var infoWindow = new google.maps.InfoWindow({map: map});
-
-            // Try HTML5 geolocation.
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent('Location found.');
-                    map.setCenter(pos);
-                }, function() {
-                    handleLocationError(true, infoWindow, map.getCenter());
-                });
-            } else {
-                // Browser doesn't support Geolocation
-                handleLocationError(false, infoWindow, map.getCenter());
-            }
-
-
-            var mapOptions = {
-                center: myLatlng,
-                zoom: 16,
-                disableDefaultUI: true,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("map"),
-                mapOptions);
-
-            //Marker + infowindow + angularjs compiled ng-click
-            var contentString = "<div><a ng-click='clickTest()'>Click me!</a></div>";
-            var compiled = $compile(contentString)($scope);
-
-            var infowindow = new google.maps.InfoWindow({
-                content: compiled[0]
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: 'Uluru (Ayers Rock)'
-            });
-
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
-            });
-
-            $scope.map = map;
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-
+    .controller('MapCtrl', function($scope, $ionicLoading, $rootScope, $compile, uiGmapGoogleMapApi, gmapsScope) {
+        uiGmapGoogleMapApi.then(function(maps) {});
+        $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+        var posOptions = {timeout: 10000, enableHighAccuracy: false};
         $scope.centerOnMe = function() {
-            if(!$scope.map) {
+            gmapsScope.centerOnMe();
+        };
+
+    })
+
+    .service('gmapsScope', function($ionicLoading, $ionicPopup) {
+    var scope = null;
+    return {
+        set: function(value) {
+            scope = value;
+        },
+        get: function() {
+            return scope;
+        },
+        centerOnMe: function() {
+            if(!scope) {
                 return;
             }
 
-            $scope.loading = $ionicLoading.show({
-                content: 'Getting current location...',
+            $ionicLoading.show({
+                content: 'Определяем текущую позицию...',
                 showBackdrop: false
             });
 
             navigator.geolocation.getCurrentPosition(function(pos) {
-                $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-                $scope.loading.hide();
+                console.log('Getting current location...')
+                scope.my.coords = {latitude: pos.coords.latitude, longitude: pos.coords.longitude};
+                //scope.loc.coords =  { latitude: pos.coords.latitude, longitude: pos.coords.longitude };
+
+                var coords = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+                scope.map.control.getGMap().setCenter(coords);
+                if (scope.onChangeCenter)
+                    scope.onChangeCenter(coords);
+
+                $ionicLoading.hide();
             }, function(error) {
-                alert('Unable to get location: ' + error.message);
+                $ionicLoading.hide();
+                if (error.code == 1)
+                    $ionicPopup.alert({ title: 'Ошибка', template: 'Разрешите определить вашу геопозицию. Мы найдем ближайшие клиники и врачей.'});
+                else if (error.code == 2)
+                    $ionicPopup.alert({ title: 'Ошибка', template: 'Невозможно определить вашу геопозицию.'});
+                else if (error.code == 3)
+                    $ionicPopup.alert({ title: 'Ошибка', template: 'Невозможно определить вашу геопозицию.'});
+                else $ionicPopup.alert({ title: 'Ошибка', template: error.message});
             });
+        }
+    };
+})
+
+    .controller('LeftMenuCrt', function($scope, $state, $ionicLoading, $rootScope, $compile, uiGmapGoogleMapApi, gmapsScope) {
+        $scope.onExit = function() {
+
+                $state.go('signin');
+
         };
 
-    });
+    })
+

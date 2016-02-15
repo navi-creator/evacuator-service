@@ -9,7 +9,7 @@
     		</div>
             <div class="form signup">
                 <div class="ev-input">
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" placeholder="Ваше ник">
                 </div>
                 <div class="row">
                     <div class="col">
@@ -35,16 +35,16 @@
                     </div>
                 </div>
                 <div class="ev-input">
-                    <input type="text" placeholder="ГОС НОМЕР  X000XX000">
+                    <input type="text" placeholder="ГОС НОМЕР X000XX000">
                 </div>
                 <div class="ev-input">
-                    <input type="tel" placeholder="Номер телефона">
+                    <input ng-model="user.tel" autocomplete="tel" autocorrect="off" type="tel" placeholder="Номер телефона">
                 </div>
                 <button class="ev-button button-green">
                     Выслать пароль
                 </button>
                 <div class="ev-input">
-                    <input type="tel" placeholder="Пароль из SMS">
+                    <input ng-model="user.pwd" autocomplete="tel" autocorrect="off" type="tel" placeholder="Пароль из SMS">
                 </div>
                 <button class="ev-button button-blue">
                     Зарегестрироваться

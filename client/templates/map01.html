@@ -9,7 +9,7 @@
     </div>
     <ion-content scroll="false" class="map-wrapper has-header">
     	<div class="map-container">
-            <div id="map" data-tap-disabled="true"></div>
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
             <div class="centerMarker"></div>
             <div class="use-info">
                 <div class="alert">!</div>
@@ -21,7 +21,7 @@
             <div class="no-geoposition">
                 Геопозиция не определена <i ng-click="centerOnMe()" class="ion-navigate"></i>
             </div>
-            <button class="add round-button green">
+            <button ng-click="modal.show()" class="add round-button green">
                 <i class="ion-plus-round"></i>
             </button>
         </div>
