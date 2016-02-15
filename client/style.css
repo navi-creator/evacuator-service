@@ -151,13 +151,8 @@
   width: 100%;
   position: relative;
 }
-.map-container .map.center {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.map-container .map.center .angular-google-map,
-.map-container .map.center .angular-google-map-container {
+.map-container .angular-google-map,
+.map-container .angular-google-map-container {
   width: 100%;
   height: 100%;
 }
