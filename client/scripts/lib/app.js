@@ -63,8 +63,8 @@ function config($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) 
             url: '/map02',
             views:{
                 'menuContent': {
-                    templateUrl: 'client/templates/map02.html'
-                    //controller: ''
+                    templateUrl: 'client/templates/map02.html',
+                    controller: 'MapCtrl'
                 }
             }
         })
@@ -72,8 +72,8 @@ function config($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) 
             url: '/map03',
             views:{
                 'menuContent': {
-                    templateUrl: 'client/templates/map03.html'
-                    //controller: ''
+                    templateUrl: 'client/templates/map03.html',
+                    controller: 'MapCtrl'
                 }
             }
         })
@@ -90,8 +90,8 @@ function config($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) 
             url: '/service',
             views:{
                 'menuContent': {
-                    templateUrl: 'client/templates/service.html'
-                    //controller: ''
+                    templateUrl: 'client/templates/service.html',
+                    controller: 'MapCtrlServ'
                 }
             }
         })
