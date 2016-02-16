@@ -9,8 +9,7 @@
     </div>
     <ion-content scroll="false" class="map-wrapper has-header">
     	<div class="map-container">
-            <ui-gmap-google-map style='width: 100%' center='map.center' zoom='map.zoom' options="map.options" control="map.control">
-            </ui-gmap-google-map>
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options" control="map.control"></ui-gmap-google-map>
             <div class="centerMarker"></div>
             <div class="use-info">
                 <div class="alert">!</div>
@@ -19,10 +18,10 @@
                     <p>Для точного определения вашего местоположения</p>
                 </div>
             </div>
-            <div class="no-geoposition">
-                Геопозиция не определена <i class="ion-navigate"></i>
+            <div ng-click="centerOnMe()" class="no-geoposition">
+                {{geoTitle}} <i class="ion-navigate"></i>
             </div>
-            <button class="add round-button green">
+            <button ng-click="modal.show()" class="add round-button green">
                 <i class="ion-plus-round"></i>
             </button>
         </div>

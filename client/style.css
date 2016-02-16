@@ -2,13 +2,29 @@
   text-align: center;
 }
 
+.centerMarker {
+  position: absolute;
+  background: url(../img/pin.png) no-repeat;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -25px;
+  margin-top: -40px;
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+}
+
 /******vars*********/
 /******v-align******/
-.valign, .valign .scroll {
+.valign {
   min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.valign .scroll {
+  width: 100%;
 }
 
 /******splash*******/
@@ -148,6 +164,11 @@
   width: 100%;
   position: relative;
 }
+.map-container .angular-google-map,
+.map-container .angular-google-map-container {
+  width: 100%;
+  height: 100%;
+}
 .map-container .use-info {
   position: absolute;
   top: 0px;
@@ -242,6 +263,7 @@
 .map-container .evacuation-info .adress .icon {
   border-right: 1px #e6e6e6 solid;
   padding: 15px 10px;
+  flex: 0 0 auto;
 }
 .map-container .evacuation-info .adress .icon .hexa {
   width: 45px;
@@ -294,8 +316,10 @@
 }
 .map-container .evacuation-info .car-info .field .info label {
   font-size: 14px;
+  flex: 0 0 auto;
 }
 .map-container .evacuation-info .car-info .field .info input {
+  flex: 1 1 auto;
   height: auto;
   line-height: normal;
   font-size: 14px;
@@ -469,9 +493,71 @@
   margin-top: 20px;
 }
 
+/******service*******/
+.service-adress {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: #fff;
+  font-size: 17px;
+  padding: 30px 20px;
+}
+.service-adress p {
+  font-weight: 300;
+  margin: 10px 0 0;
+  line-height: 22px;
+}
+.service-adress .round-button {
+  margin-top: 30px;
+}
+
+/*******contacts********/
+.contacts-list a {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #e6e6e6 solid;
+  padding: 12px;
+  color: #000;
+  text-decoration: none;
+}
+.contacts-list a.activated {
+  background: rgba(204, 204, 204, 0.3);
+}
+.contacts-list .ava {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+  text-align: center;
+}
+.contacts-list .ava img {
+  width: 100%;
+}
+.contacts-list .ava i {
+  display: block;
+  color: #58C5F5;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 45px;
+  border: 2px #58C5F5 solid;
+}
+.contacts-list .user {
+  font-size: 14px;
+}
+.contacts-list .user .name {
+  font-weight: 600;
+}
+.contacts-list .user .work {
+  color: #212121;
+}
+
 /********elements*******/
 .bar.bar-transparent {
   background: transparent;
+  border: none;
 }
 
 .button.button-white {
@@ -484,6 +570,11 @@
 
 .bar .title {
   font-weight: 400;
+}
+
+.svg-nav {
+  width: 35px;
+  margin-top: 6px;
 }
 
 .ev-input {
@@ -612,6 +703,7 @@
 
 .round-button {
   text-align: center;
+  padding: 0px;
   font-size: 30px;
   border: none;
   color: #fff;

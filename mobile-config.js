@@ -1,16 +1,16 @@
 App.info({
     //'android-packageName': 'ru.helpmed',
     //'android-versionCode':"131",
-    id:"com.helpmed.app",
+    id:"com.evacuator.app",
     //id:"ru.helpmed",
     //'ios-CFBundleIdentifier': "com.helpmed.app",
-    buildNumber: "410",
-    version: "2.2.5715",
-    name: 'Helpmed',
-    description: 'Helpmed project.',
-    author: 'Golovanov Ilya',
-    email: 'connect.golovanov@gmail.com',
-    website: 'https://helpmed.ru'
+    buildNumber: "405",
+    version: "0.0.1",
+    name: 'Evacuator',
+    description: 'Evacuator.',
+    author: 'Goncharov Victor',
+    email: 'navi8602@gmail.com',
+    website: 'http://evacuator.site'
 });
 
 App.icons({
@@ -39,12 +39,6 @@ App.setPreference('SplashScreenDelay', '10000');
 App.setPreference('Fullscreen', 'true');
 
 App.setPreference('KeyboardDisplayRequiresUserAction', 'false');
-
-App.accessRule("blob:*");
-App.accessRule('http://dev.helpmed.com/*')
-App.accessRule('https://devmeteor.helpmed.com/*')
-App.accessRule('http://devmeteor.helpmed.com/*')
-App.accessRule('http://mob.helpmed.com/*')
 
 App.accessRule('*.google.com')
 App.accessRule('*.googleapis.com')

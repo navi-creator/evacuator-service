@@ -3,6 +3,18 @@
 .align-center {
 	text-align: center;
 }
+.centerMarker {
+	position: absolute;
+	background: url(../img/pin.png) no-repeat;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	margin-left: -25px;
+	margin-top: -40px;
+	height: 40px;
+	width: 50px;
+	cursor: pointer;
+}
 /******vars*********/
 $green: #66A817;
 $blue: #2098F5;
@@ -155,6 +167,11 @@ $blue: #2098F5;
 	height: 100%;
 	width: 100%;
 	position: relative;
+		.angular-google-map,
+		.angular-google-map-container {
+			width: 100%;
+			height: 100%;
+		}
 	.use-info {
 		position: absolute;
 		top: 0px;
@@ -247,6 +264,7 @@ $blue: #2098F5;
 			.icon {
 				border-right: 1px #e6e6e6 solid;
 				padding: 15px 10px;
+				flex: 0 0 auto;
 				.hexa {
 					width: 45px;
 					height: 45px;
@@ -297,8 +315,10 @@ $blue: #2098F5;
 					padding: 9px 0 11px;
 					label {
 						font-size: 14px;
+						flex: 0 0 auto;
 					}
 					input {
+						flex: 1 1 auto;
 						height: auto;
 						line-height: normal;
 						font-size: 14px;
@@ -468,7 +488,67 @@ $blue: #2098F5;
 		} 
 	}
 }
-
+/******service*******/
+.service-adress {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: #fff;
+	font-size: 17px;
+	padding: 30px 20px;
+	p {
+		font-weight: 300;
+		margin: 10px 0 0;
+		line-height: 22px;
+	}
+	.round-button {
+		margin-top: 30px;
+	}
+}
+/*******contacts********/
+.contacts-list {
+	a {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px #e6e6e6 solid;
+		padding: 12px;
+		color: #000;
+		text-decoration: none;
+		&.activated {
+			background: rgba(#ccc,0.3);
+		}
+	}
+	.ava {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 12px;
+		text-align: center;
+		img {
+			width: 100%;
+		}
+		i {
+			display: block;
+			color: #58C5F5;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			font-size: 25px;
+			line-height: 45px;
+			border: 2px #58C5F5 solid;
+		}
+	}
+	.user {
+		font-size: 14px;
+		.name {
+			font-weight: 600;
+		}
+		.work {
+			color: #212121;
+		}
+	}
+}
 /********elements*******/
 .bar.bar-transparent {
 	background: transparent;
@@ -592,6 +672,7 @@ $blue: #2098F5;
 }
 .round-button {
 	text-align: center;
+	padding: 0px;
 	font-size: 30px;
 	border: none;
 	color: #fff;

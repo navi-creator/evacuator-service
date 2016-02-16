@@ -1,0 +1,32 @@
+<ion-view>
+    <div class="bar bar-header bar-positive">
+        <button menu-toggle="left" class="button button-clear button-white">
+            <img class="svg-nav" src="svg/menue.svg" alt="">
+        </button>
+        <h1 class="title">Автосервис</h1>
+        <button class="button button-icon icon ion-ios-information-outline button-clear button-white"></button>
+    </div>
+    <ion-content scroll="false" class="map-wrapper has-header">
+        <div class="map-container">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options" control="map.control">
+                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+
+            <div class="service-adress">
+                <b>Автосервис & Эвакуатор</b>
+                <p>
+                    г. Москва Можайское шоссе 159 корпус 9 <br>
+                    Телефон: +7 (926) 858-10-80 <br>
+                    E-mail: avto@evakuator.site  <br>
+                    Мы работаем для вас Пн-Вс. с 8:00 до 22:00. <br>
+                </p>
+                <div class="text-center">
+                    <button onclick="document.location.href='tel:+79031225995'" class="round-button green">
+                        <i class="ion-ios-telephone"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
