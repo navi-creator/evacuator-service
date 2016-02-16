@@ -3,6 +3,23 @@
 .align-center {
 	text-align: center;
 }
+.centerMarker {
+	position:absolute;
+	/*url of the marker*/
+	background:url(../img/pin.png) no-repeat;
+	/*center the marker*/
+	top:50%;left:50%;
+
+	z-index:1;
+	/*fix offset when needed*/
+	margin-left:-25px;
+	margin-top:-40px;
+	/*size of the image*/
+	height:40px;
+	width:50px;
+
+	cursor:pointer;
+}
 /******vars*********/
 $green: #66A817;
 $blue: #2098F5;
@@ -252,6 +269,7 @@ $blue: #2098F5;
 			.icon {
 				border-right: 1px #e6e6e6 solid;
 				padding: 15px 10px;
+				flex: 0 0 auto;
 				.hexa {
 					width: 45px;
 					height: 45px;
@@ -302,8 +320,10 @@ $blue: #2098F5;
 					padding: 9px 0 11px;
 					label {
 						font-size: 14px;
+						flex: 0 0 auto;
 					}
 					input {
+						flex: 1 1 auto;
 						height: auto;
 						line-height: normal;
 						font-size: 14px;
